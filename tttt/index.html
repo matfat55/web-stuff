@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tic-Tac-Toe</h1>
+        
+        <div class="game-options">
+            <div class="mode-selection">
+                <button id="one-player-btn" class="mode-btn active">One Player</button>
+                <button id="two-player-btn" class="mode-btn">Two Player</button>
+            </div>
+            
+            <div id="difficulty-selection" class="difficulty-selection">
+                <button id="easy-btn" class="difficulty-btn active">Easy</button>
+                <button id="medium-btn" class="difficulty-btn">Medium</button>
+                <button id="hard-btn" class="difficulty-btn">Hard</button>
+                <button id="impossible-btn" class="difficulty-btn">Impossible</button>
+            </div>
+            
+            <button id="new-game-btn" class="new-game-btn">New Game</button>
+        </div>
+        
+        <div class="game-status">
+            <p id="status-message">Player X's turn</p>
+        </div>
+        
+        <div class="main-board">
+            <!-- Main 3x3 board -->
+            <div class="main-cell" id="main-0">
+                <div class="inner-board" id="inner-board-0"></div>
+            </div>
+            <div class="main-cell" id="main-1">
+                <div class="inner-board" id="inner-board-1"></div>
+            </div>
+            <div class="main-cell" id="main-2">
+                <div class="inner-board" id="inner-board-2"></div>
+            </div>
+            <div class="main-cell" id="main-3">
+                <div class="inner-board" id="inner-board-3"></div>
+            </div>
+            <div class="main-cell" id="main-4">
+                <div class="inner-board" id="inner-board-4"></div>
+            </div>
+            <div class="main-cell" id="main-5">
+                <div class="inner-board" id="inner-board-5"></div>
+            </div>
+            <div class="main-cell" id="main-6">
+                <div class="inner-board" id="inner-board-6"></div>
+            </div>
+            <div class="main-cell" id="main-7">
+                <div class="inner-board" id="inner-board-7"></div>
+            </div>
+            <div class="main-cell" id="main-8">
+                <div class="inner-board" id="inner-board-8"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+    <script src="ai.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
