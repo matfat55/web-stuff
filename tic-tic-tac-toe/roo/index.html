@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tic-Tic-Tac-Toe</h1>
+        
+        <div class="game-controls">
+            <select id="gameMode" class="game-select">
+                <option value="2p">Two Players</option>
+                <option value="ai">vs Computer</option>
+            </select>
+            
+            <select id="difficulty" class="game-select" disabled>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="impossible">Impossible</option>
+            </select>
+            
+            <button id="newGame" class="game-button">New Game</button>
+        </div>
+
+        <div class="game-status">
+            <p id="statusMessage">Player X's turn</p>
+        </div>
+
+        <div class="main-board">
+            <!-- Main 3x3 board -->
+            <div class="outer-cell" data-index="0"></div>
+            <div class="outer-cell" data-index="1"></div>
+            <div class="outer-cell" data-index="2"></div>
+            <div class="outer-cell" data-index="3"></div>
+            <div class="outer-cell" data-index="4"></div>
+            <div class="outer-cell" data-index="5"></div>
+            <div class="outer-cell" data-index="6"></div>
+            <div class="outer-cell" data-index="7"></div>
+            <div class="outer-cell" data-index="8"></div>
+        </div>
+
+        <!-- Template for inner board -->
+        <template id="innerBoardTemplate">
+            <div class="inner-board">
+                <div class="inner-cell" data-cell="0"></div>
+                <div class="inner-cell" data-cell="1"></div>
+                <div class="inner-cell" data-cell="2"></div>
+                <div class="inner-cell" data-cell="3"></div>
+                <div class="inner-cell" data-cell="4"></div>
+                <div class="inner-cell" data-cell="5"></div>
+                <div class="inner-cell" data-cell="6"></div>
+                <div class="inner-cell" data-cell="7"></div>
+                <div class="inner-cell" data-cell="8"></div>
+            </div>
+        </template>
+    </div>
+    
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
