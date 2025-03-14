@@ -1,133 +1,134 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-    min-height: 100vh;
-    overflow: hidden;
-    font-family: 'Arial', sans-serif;
-    color: #00695c;
+	background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+	min-height: 100vh;
+	overflow: hidden;
+	font-family: "Arial", sans-serif;
+	color: #00695c;
 }
 
 .container {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: relative;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .message {
-    text-align: center;
-    z-index: 2;
+	text-align: center;
+	z-index: 2;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: float 3s ease-in-out infinite;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	animation: float 3s ease-in-out infinite;
 }
 
 p {
-    font-size: 1.5rem;
-    animation: float 3.5s ease-in-out infinite;
+	font-size: 1.5rem;
+	animation: float 3.5s ease-in-out infinite;
 }
 
 .bubbles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	left: 0;
 }
 
 .bubble {
-    position: absolute;
-    bottom: -100px;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    animation: rise 10s infinite ease-in;
+	position: absolute;
+	bottom: -100px;
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	animation: rise 10s infinite ease-in;
 }
 
 .bubble:nth-child(1) {
-    left: 10%;
-    animation-duration: 8s;
+	left: 10%;
+	animation-duration: 8s;
 }
 
 .bubble:nth-child(2) {
-    left: 40%;
-    animation-duration: 12s;
+	left: 40%;
+	animation-duration: 12s;
 }
 
 .bubble:nth-child(3) {
-    left: 70%;
-    animation-duration: 10s;
+	left: 70%;
+	animation-duration: 10s;
 }
 
 .waves {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 15vh;
-    overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 15vh;
+	overflow: hidden;
 }
 
 .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    animation: wave 10s infinite linear;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 200%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	animation: wave 10s infinite linear;
 }
 
 .wave:nth-child(1) {
-    animation-duration: 8s;
-    transform: translateY(10px);
+	animation-duration: 8s;
+	transform: translateY(10px);
 }
 
 .wave:nth-child(2) {
-    animation-duration: 12s;
-    transform: translateY(20px);
+	animation-duration: 12s;
+	transform: translateY(20px);
 }
 
 @keyframes rise {
-    0% {
-        bottom: -100px;
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(100px);
-    }
-    100% {
-        bottom: 100vh;
-        transform: translateX(-100px);
-    }
+	0% {
+		bottom: -100px;
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(100px);
+	}
+	100% {
+		bottom: 100vh;
+		transform: translateX(-100px);
+	}
 }
 
 @keyframes wave {
-    0% {
-        transform: translateX(0) rotate(0deg);
-    }
-    100% {
-        transform: translateX(-50%) rotate(360deg);
-    }
+	0% {
+		transform: translateX(0) rotate(0deg);
+	}
+	100% {
+		transform: translateX(-50%) rotate(360deg);
+	}
 }
 
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
 }
