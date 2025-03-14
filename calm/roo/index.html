@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Calm</title>
+    <style>
+        :root {
+            --color-primary: #a8d8ea;
+            --color-secondary: #aa96da;
+            --color-background: #f5f5f5;
+            --color-text: #444444;
+            --transition-speed: 0.5s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--color-background);
+            color: var(--color-text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.6;
+            transition: background-color var(--transition-speed);
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .breathing-circle {
+            width: 200px;
+            height: 200px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            margin: 2rem auto;
+            animation: breathe 8s infinite ease-in-out;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            opacity: 0.9;
+        }
+
+        .tip {
+            font-size: 1.1rem;
+            color: var(--color-secondary);
+            margin: 1rem 0;
+            opacity: 0;
+            transition: opacity var(--transition-speed);
+        }
+
+        @keyframes breathe {
+            0%, 100% {
+                transform: scale(0.8);
+                background: var(--color-primary);
+            }
+            50% {
+                transform: scale(1);
+                background: var(--color-secondary);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .breathing-circle {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .message {
+                font-size: 1.2rem;
+            }
+            
+            .tip {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Take a Moment to Breathe</h1>
+        <div class="breathing-circle"></div>
+        <p class="message">Follow the circle's rhythm. Breathe in as it expands, out as it contracts.</p>
+        <p class="tip"></p>
+    </div>
+
+    <script>
+        const tips = [
+            "Focus on the present moment",
+            "Let your thoughts float away like clouds",
+            "Feel the weight lift from your shoulders",
+            "Embrace the peace within",
+            "Your breath is your anchor"
+        ];
+
+        function updateTip() {
+            const tip = document.querySelector('.tip');
+            tip.style.opacity = '0';
+            
+            setTimeout(() => {
+                tip.textContent = tips[Math.floor(Math.random() * tips.length)];
+                tip.style.opacity = '1';
+            }, 500);
+        }
+
+        // Update tip every 10 seconds
+        updateTip();
+        setInterval(updateTip, 10000);
+
+        // Add subtle background color shift
+        let hue = 0;
+        setInterval(() => {
+            hue = (hue + 1) % 360;
+            document.body.style.backgroundColor = `hsl(${hue}, 20%, 96%)`;
+        }, 100);
+    </script>
+</body>
+</html>
